@@ -14,7 +14,7 @@ The game organizers present a download of their compiled RPG game and a runtime 
 Puzzle solve log:
 The game is a basic RPG game and searching all over the map doesn't reveal anything. 
 
-I decided that the basic input to a game like this is a save file. I find those files being save in the game folder. Taking a look at the files they are partly human readable, but very heavily encoded. Sample below:
+I decided that the basic input to a game like this is a save file. I find those files being saved in the game folder. Taking a look at the files they are partly human readable, but very heavily encoded. Sample below:
 {:characters[[I"
 bunny:ETi :playtime_sI"
 00:24:23;T{:
@@ -22,15 +22,15 @@ systemo:Game_System:@save_disabledF:@menu_disabledF:
 
 I tried to tinker with some of the data and load the save file, but the game just errored out.  
 
-I decided to learn a little about the game engine to see if I could use anything to my advantage. I quickly found a website (http://www.saveeditonline.com/) that will help you adjust your character into essentially beast mode. 
+I decided to learn a little about the game engine to see if I could use anything to my advantage. I quickly found a website (http://www.saveeditonline.com/) that will help you adjust your character into essentially beast/God mode. 
 
-Now, I'm ready to rock. I head into the dungeon area and work my way back to the boss to put his head on a platter. I get into it and about 30 minutes of doing serious damage; about 4000 pts per hit. He casts a spell healing himself for 260,000+ points, twice. :( OK, maybe he can do that only once or twice. So, I download a macro repeater program and run the attack in a loop for a total of 2048 attacks overnight. I run down stairs in the morning only to see that stupid boss guy sitting there, smirking at me. >:0
+Now, I'm ready to rock. I head into the dungeon area and work my way back to the boss to put his head on a platter. I get into it and about 30 minutes of doing serious damage; about 4000 pts per hit. He casts a spell healing himself for 260,000+ points, twice. :( OK, maybe he can do that a couple times. So, I download a macro repeater program and run the attack in a loop for a total of 2048 attacks overnight. I run down stairs in the morning only to see that stupid boss guy sitting there, smirking at me. >:0
 
 OK, it seems clear at this point that I'm supposed to use actual hacking on the binary file or something. I throw the file into PEStudio, just to get a feel for the file. Nothing interesting there. 
 
-Time for some more research on the RPG VX ACE program. Turns out you can deploy your game with encryption, embedding the resource files into the binary file. Since, we have no resource files it must mean that the they are encrypted in the binary. I wonder if there might be a decrypter that can expose some of resource files. I found one on a shady looking for forum and it's probably a trojan (https://www.reddit.com/r/FNaFBFangames/comments/3o0a7j/if_you_want_to_decrypt_any_rpg_maker_games_heres/), but hey this is Hacky-Easter and risks have to be taken.
+Time for some more research on the RPG VX ACE program. Turns out you can deploy your game with encryption, embedding the resource files into the binary file. Since, we have no resource files it must mean that the they are encrypted in the binary. I wonder if there might be a decrypter that can expose some of resource files. I found one on a shady looking forum and it's probably a trojan (https://www.reddit.com/r/FNaFBFangames/comments/3o0a7j/if_you_want_to_decrypt_any_rpg_maker_games_heres/), but hey this is HackyEaster and risks have to be taken.
 
-OK, I download and run the trojan and I hit the export all button. Success! Only...wait...where are the exported files? Surely, this trojan has a help section or a help line I can call. Nope, nothing like that. After a little searching about the trojan/decrypter, someone says hey has a step put the decrypter in the folder with the exe file. OK, I'm game, let's try that. This time I'm golden. It extracts all the resource files and puts them in a folder for me; gift wrapped. OK, now, to find that egg.
+OK, I download and run the trojan and I hit the "export all" button. Success! Only...wait...where are the exported files? Surely, this trojan has a help section or a help line I can call. Nope, nothing like that. After a little googling about the trojan/decrypter, someone has a step of putting the decrypter in the folder with the exe file. OK, I'm game, let's try that. This time I'm golden. It extracts all the resource files and puts them in a folder for me; gift wrapped. OK, now, to find that egg.
 
 OK, I start going through all the files not really sure what I'm looking for exactly. I finally, find it in the items file. See sample below:
 ii;!i ;"i;#i;$i o; ;I"?There's a strange engravation:
@@ -42,7 +42,7 @@ There's that horrible encoding again. I get my glasses on and do some comparison
 ?There's a strange engravation:
 34 37 72 75 33 68 33 72 30;T;I"Easter Egg
 
-OK. I still don't know what I've got for sure, because the program could still doing something fancy with those numbers. However, those do look pretty close the ASCII numbers near the alphabet. OK, that gives me: 
+OK. I still don't know what I've got for sure, because the program could still doing something fancy with those numbers. However, those do look pretty close the ASCII decimal numbers near the alphabet. OK, that gives me: 
 "%HK!D!H
 
 Well, it has HK in it for Hacky... Who am I to argue with the HackyEaster puppet masters. Although, I start looking at the Base64 decoding of those numbers as decimals:
@@ -51,7 +51,7 @@ Do you see the word eggs in there? Look again:
 IiAlI EggS yAhIEQgISBIIB4=
 I'm thinking maybe it's leetspeak and I'm too old to read it. :|
 
-I just wasn't convinced, so I kept tinkering with it and started looking for what else these numbers could be. I worked on mapping coordinates, but no hits, there. Finally, I stare at the numbers real close and say to my, "Those numbers are technically in the hex range too. Do those tricksters at HackyEaster have another trick up their sleeves?" 
+I just wasn't convinced, so I kept tinkering with it and started looking for what else these numbers could be. I worked on mapping coordinates, but no hits, there. Finally, I stare at the numbers real close and say to myself, "Those numbers are technically in the hex range too. Do those tricksters at HackyEaster have another trick up their sleeves? Hex with no letters." 
 Sure enough:
 47ru3h3r0 
 Which to us non-cool people:
