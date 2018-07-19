@@ -9,7 +9,7 @@ https://github.com/chaocipher/Writeups/blob/master/ASIS%202018%20-%20Warm%20up.p
 https://hackyeaster.hacking-lab.com/hackyeaster/
 https://github.com/chaocipher/Writeups/blob/master/HackyEaster2018Teaser-Write-up.txt
 
-## SecurityFest CTF
+## Meepwn CTF
 https://github.com/chaocipher/Writeups/blob/master/Meepwn2018-whitesnow.pdf
 
 ## SecurityFest CTF
