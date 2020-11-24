@@ -1,26 +1,21 @@
 # Writeups
 # 2020
 ## HackTM CTF
-https://2020.hacktm.ro/
 https://github.com/chaocipher/Writeups/blob/master/HackTM2020%20-%20OLD%20Times.pdf
 
 ## B01Lers CTF
-https://http://ctfd2.ctf.b01lers.net/
 https://github.com/chaocipher/Writeups/blob/master/B01lers%20CTF%202020.pdf
 
 # 2019
 ## Facebook CTF 
-https://www.fbctf.com
 https://github.com/chaocipher/Writeups/blob/master/Facebook%20CTF%202019.pdf
 
 # 2018
 ## ASIS CTF 
-https://asisctf.com
 https://github.com/chaocipher/Writeups/blob/master/The%20Early%20School.pdf
 https://github.com/chaocipher/Writeups/blob/master/ASIS%202018%20-%20Warm%20up.pdf
 
 ## Hacker Easter
-https://hackyeaster.hacking-lab.com/hackyeaster/
 https://github.com/chaocipher/Writeups/blob/master/HackyEaster2018Teaser-Write-up.txt
 
 ## Hitcon
